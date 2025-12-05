@@ -441,4 +441,17 @@ class Settings {
 	public function __set( $name, $value ) {
 		return $this->set_option( 'sc_' . $name, $value );
 	}
+
+	/**
+	 * isset handler so empty()/isset() work with __get().
+	 *
+	 * @param string $name Option name.
+	 *
+	 * @return bool
+	 */
+	public function __isset( $name ) {
+		$options = $this->get_options();
+		return isset( $options[ 'sc_' . $name ] );
+	}
 }
+
