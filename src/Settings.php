@@ -443,10 +443,9 @@ class Settings {
 	}
 
 	/**
-	 * isset handler so empty()/isset() work with __get().
+	 * Handles isset() calls so empty()/isset() behave consistently with __get().
 	 *
 	 * @param string $name Option name.
-	 *
 	 * @return bool
 	 */
 	public function __isset( $name ) {
