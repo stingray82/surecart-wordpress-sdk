@@ -210,7 +210,7 @@ class Client {
 		return trailingslashit( apply_filters( 'surecart_licensing_endpoint', 'https://api.surecart.com' ) );
 	}
 
-		
+
 	/**
 	 * Set project basename, slug and version
 	 *
